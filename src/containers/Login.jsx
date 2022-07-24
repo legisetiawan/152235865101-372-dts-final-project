@@ -12,7 +12,7 @@ function Login() {
         Please Sign In
       </Typography>
       <Avatar sx={{m:2}} >
-        <AccountCircle />
+        <AccountCircle fontSize="large" />
       </Avatar>
       </Box>
       <FormLogin />
