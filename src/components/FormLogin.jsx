@@ -1,8 +1,6 @@
 import React from "react";
-import { Typography, TextField, Box, Button, CssBaseline, Container,Grid, } from "@mui/material";
-import {Link} from 'react-router-dom'
-import FormRegister from "./FormRegister";
-import Register from "../containers/Register";
+import { TextField, Box, Button, CssBaseline, Container, Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function FormLogin() {
   return (
@@ -24,8 +22,8 @@ function FormLogin() {
               Sign In
             </Button>
             <Grid container>
-            <Grid item>
-                <Link to={<Register/>} variant="body2">
+              <Grid item>
+                <Link to="/register" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
