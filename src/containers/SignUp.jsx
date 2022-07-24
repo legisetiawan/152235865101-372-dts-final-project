@@ -1,9 +1,9 @@
 import React from 'react'
 import {Typography,Box,Avatar} from '@mui/material'
-import FormRegister from '../components/FormRegister';
+import FormSignUp from '../components/FormSignUp';
 import { AccountCircle } from "@mui/icons-material";
 
-function Register() {
+const SignUp = () => {
   return (
     <>
        <Box sx={{ marginTop: 8, display: "flex", flexDirection: "column", alignItems: "center" }}>
@@ -15,9 +15,9 @@ function Register() {
         <AccountCircle fontSize="large" />
       </Avatar>
       </Box>
-      <FormRegister/>
+      <FormSignUp/>
     </>
   );
 }
 
-export default Register
+export default SignUp

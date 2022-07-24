@@ -2,7 +2,7 @@ import React from 'react'
 import {CssBaseline,Container,Box,Grid,TextField,Button} from '@mui/material'
 import {Link} from 'react-router-dom'
 
-function FormRegister() {
+function FormSignUp() {
   return (
     <>
      <Container component="main" maxWidth="xs">
@@ -84,4 +84,4 @@ function FormRegister() {
   );
 }
 
-export default FormRegister
+export default FormSignUp

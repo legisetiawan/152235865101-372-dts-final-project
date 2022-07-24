@@ -4,8 +4,8 @@ import './index.css';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Login from './containers/Login';
-import Register from './containers/Register'
+import Login from './containers/SignIn';
+import Register from './containers/SignUp'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

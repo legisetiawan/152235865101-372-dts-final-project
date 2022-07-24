@@ -2,7 +2,7 @@ import React from "react";
 import { TextField, Box, Button, CssBaseline, Container, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 
-function FormLogin() {
+const FormSignIn = () => {
   return (
     <>
       <Container maxWidth="xs">
@@ -35,4 +35,4 @@ function FormLogin() {
   );
 }
 
-export default FormLogin;
+export default FormSignIn;
