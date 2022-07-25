@@ -1,8 +1,11 @@
 import React from 'react'
+import {Typography} from '@mui/material'
 
-function Home() {
+const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <Typography variant='body1' sx={{alingn:"center"}}>My News</Typography>
+    </>
   );
 }
 

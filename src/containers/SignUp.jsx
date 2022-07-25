@@ -12,7 +12,7 @@ const SignUp = () => {
         Please Sign UP
       </Typography>
       <Avatar sx={{m:2}} >
-        <AccountCircle fontSize="large" />
+        <AccountCircle fontSize="large"/>
       </Avatar>
       </Box>
       <FormSignUp/>
