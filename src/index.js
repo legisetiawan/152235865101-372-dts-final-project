@@ -1,23 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Login from './containers/SignIn';
-import Register from './containers/SignUp'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Login from "./containers/SignIn";
+import Register from "./containers/SignUp";
+import { store } from "./app/store";
+import { Provider } from "react-redux/";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <Routes>
-      <Route path='/' element={ <App />}/>
-      <Route path='/login' element={ <Login />}/>
-      <Route path='/register' element={ <Register />}/>
-    </Routes>
-    </BrowserRouter>
-   
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
