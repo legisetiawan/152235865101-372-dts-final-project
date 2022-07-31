@@ -33,6 +33,6 @@ const FormSignIn = () => {
       </Container>
     </>
   );
-}
+};
 
 export default FormSignIn;
