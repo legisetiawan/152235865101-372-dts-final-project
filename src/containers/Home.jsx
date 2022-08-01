@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Container, Grid } from "@mui/material";
+import { Typography, Container, Box } from "@mui/material";
 import CardNews from "../components/CardNews";
 import { useNewsQuery } from "../services/NewsAPI";
 
@@ -18,17 +18,9 @@ const Home = () => {
           <>Loading data </>
         ) : (
           data.articles.map((newsItem) => (
-            <Grid container key={newsItem.id} spacing={5}>
-              <Grid xs={4}>
-                <CardNews newsItem={newsItem} />
-              </Grid>
-              <Grid xs={4}>
-                <CardNews newsItem={newsItem} />
-              </Grid>
-              <Grid xs={4}>
-                <CardNews newsItem={newsItem} />
-              </Grid>
-            </Grid>
+            <Box key={newsItem.id} sx={{ display: "flex", gridTemplateRows: "repeat(3, 1fr)" }}>
+              <CardNews newsItem={newsItem}>1</CardNews>
+            </Box>
           ))
         )}
       </Container>

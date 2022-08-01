@@ -1,9 +1,14 @@
-import React from "react";
-import { Box, AppBar, Toolbar, Typography, Button, MenuItem, IconButton } from "@mui/material";
+import React,{useState} from "react";
+import { Box, AppBar, Toolbar, Typography, Divider, List,ListItemButton,ListItem,ListItemText } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { AccountCircle } from "@mui/icons-material";
+import LogoutIcon from "@mui/icons-material/Logout";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
+import { useNavigate } from "react-router-dom";
+
+// Import fungsi untuk melakukan Logout
+import { keluarDariApps } from "../authentication/firebase";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -46,6 +51,16 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 const navItems = ["Aricles", "About", "Contact"];
 function Navbar() {
+  const navigate = useNavigate();
+
+  const menuId = "primary-search-account-menu";
+
+  const buttonLogoutOnClickHandler = async () => {
+    // Kita akan memanggil fungsi keluarDariApps di sini
+    await keluarDariApps();
+    navigate("/login");
+  };
+
   return (
     <>
       <Box sx={{ display: "flex" }}>
@@ -54,14 +69,16 @@ function Navbar() {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
               NEWS
             </Typography>
-            
+
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase placeholder="Search…" inputProps={{ "aria-label": "search" }} />
             </Search>
-            <AccountCircle />
+            <LogoutIcon size="large" edge="end" aria-label="account of current user" aria-controls={menuId} aria-haspopup="true" color="inherit" onClick={buttonLogoutOnClickHandler}>
+              <AccountCircle />
+            </LogoutIcon>
           </Toolbar>
         </AppBar>
         <Box component="main" sx={{ p: 3 }}>
