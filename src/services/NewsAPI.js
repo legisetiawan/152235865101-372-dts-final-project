@@ -10,7 +10,7 @@ export const newsApi = createApi({
     // builder query untuk get
     // builder mutation ....
     news: builder.query({
-      query: () => "/top-headlines?country=us&apiKey=c061111314204e438fb75841651ac161",
+      query: () => "top-headlines?sources=techcrunch&apiKey=c061111314204e438fb75841651ac161",
     }),
     // newsByTechCrunch: builder.query({
     //   query: () => "/top-headlines?sources=techcrunch&apiKey=c061111314204e438fb75841651ac161",

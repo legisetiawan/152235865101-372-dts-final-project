@@ -2,13 +2,14 @@ import React from "react";
 import { Typography, Container, Box } from "@mui/material";
 import CardNews from "../components/CardNews";
 import { useNewsQuery } from "../services/NewsAPI";
+import Copyright from "../components/Copyright";
 
 const Home = () => {
   const { data, error, isLoading } = useNewsQuery();
   return (
     <>
       <Typography variant="h4" sx={{ textAlign: "center", mb: 5 }}>
-        Top headLines News
+        Top TechCrunch News
       </Typography>
       <Container maxWidth="lg">
         {/* Kita gunakan conditional rendering di sini */}
@@ -18,12 +19,13 @@ const Home = () => {
           <>Loading data </>
         ) : (
           data.articles.map((newsItem) => (
-            <Box key={newsItem.id} sx={{ display: "flex", gridTemplateRows: "repeat(3, 1fr)" }}>
+            <Box key={newsItem.author} sx={{ display: "flex", gridTemplateRows: "repeat(3, 1fr)" }}>
               <CardNews newsItem={newsItem}>1</CardNews>
             </Box>
           ))
         )}
       </Container>
+      <Copyright />
     </>
   );
 };
