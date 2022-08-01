@@ -19,13 +19,13 @@ const Home = () => {
           <>Loading data </>
         ) : (
           data.articles.map((newsItem) => (
-            <Box key={newsItem.author} sx={{ display: "flex", gridTemplateRows: "repeat(3, 1fr)" }}>
+            <Box key={newsItem.id} sx={{ display: "flex", gridTemplateRows: "repeat(3, 1fr)" }}>
               <CardNews newsItem={newsItem}>1</CardNews>
             </Box>
           ))
         )}
       </Container>
-      <Copyright />
+      <Copyright sx={{ mb: 4, position: "fixed" }} />
     </>
   );
 };
