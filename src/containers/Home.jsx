@@ -25,7 +25,7 @@ const Home = () => {
           ))
         )}
       </Container>
-      <Copyright sx={{ mb: 4, position: "fixed" }} />
+      <Copyright sx={{ mb: 4,mt:8 }} />
     </>
   );
 };
