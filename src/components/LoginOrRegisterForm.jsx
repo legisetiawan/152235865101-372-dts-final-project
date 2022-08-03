@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-
 import { Box, Button, TextField, Typography, Avatar, CssBaseline, Container } from "@mui/material";
 import Face from "@mui/icons-material/Face";
 import { Link } from "react-router-dom";
-
 import { useNavigate } from "react-router-dom";
 import { auth, loginDenganEmailDanPassword, registerDenganEmailDanPassword } from "../authentication/firebase";
-
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const LoginOrRegisterForm = ({ loginOrRegister }) => {
